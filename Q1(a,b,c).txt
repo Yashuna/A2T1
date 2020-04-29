@@ -1,0 +1,5 @@
+(a) awk '{if($2 <=1000){print}}' expression.tab
+
+(b) awk -F '\t' '$2~/ase/' annotation.tab
+
+(c) awk -F '\t' '$3~/[Pyrimidine|Purine] biosynthesis/' annotation.tab
