@@ -1,0 +1,8 @@
+When I run it in Ubuntu:
+
+mysql -u awkologist -p world_x -e 'select country.Name as Country, c.Name as Capital, countrylanguage.Percentage from country inner join city as c on c.ID = country.Capital inner join countrylanguage on country.code = countrylanguage.CountryCode where countrylanguage.Language = "English" and countrylanguage. Percentage > 50;'
+
+When I run it in MySQL:
+
+select country.Name as Country, c.Name as Capital, countrylanguage.Percentage from country inner join city as c on c.ID = country.Capital inner join countrylanguage on country.code = countrylanguage.CountryCode where countrylanguage.Language = "English" and countrylanguage. Percentage > 50;
+ 
