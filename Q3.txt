@@ -1,0 +1,17 @@
+Import the library 
+Library(ggplot2)
+
+Command in R
+text<- "
++ country,deaths
++ Germany,6314
++ Australia,88
++ Bangladesh,155
++ Russia,867
++ Belgium,7331"
+> df<-read.table(textConnection(text),sep=",",header = T, stringsAsFactors = F)
+> df<-arrange(df,deaths)
+> df$country <- factor(df$country, levels = df$country)
+> ggplot(df,aes(country,deaths,fill=country))+ geom_col()+ coord_flip()+ scale_fill_brewer(palette="Spectral")
+> ggplot(df,aes(country,deaths,fill=country))+ geom_col()+ coord_flip()+ scale_fill_brewer(palette="Spectral")+ ggtitle (label = "COVID 19 DEATH CASES, 29th April,2020")
+
